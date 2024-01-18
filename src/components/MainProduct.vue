@@ -6,7 +6,7 @@ defineProps({
 
 <template>
   <div
-    class="ps-5 pe-5 py-3 m-3 bg-white border border-gray-200 rounded-lg shadow"
+    class="ps-5 pe-5 py-3 m-3 bg-white border border-gray-200 rounded-lg shadow w-1/3"
   >
     <div class="flex justify-between">
       <div class="flex items-center pe-14">

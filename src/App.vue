@@ -15,7 +15,7 @@ const products = [
   },
   {
     icon: "bi bi-twitter text-blue-500",
-    name: "Twitter Folloers",
+    name: "Twitter Followers ",
     newValue: "807",
     unit: "k",
     value: "+17.62% ",
@@ -67,8 +67,18 @@ const products = [
 </script>
 
 <template>
-  <div class="flex flex-row ms-5">
-    <MainProduct v-for="product in products" :details="product" />
+  <div>
+    <div
+      class="flex flex-row mt-5 mx-48"
+      v-for="(row, rowIndex) in Math.ceil(products.length / 3)"
+      :key="rowIndex"
+    >
+      <MainProduct
+        v-for="(product, colIndex) in 3"
+        :details="products[rowIndex * 3 + colIndex]"
+        :key="rowIndex * 3 + colIndex"
+      />
+    </div>
   </div>
 </template>
 
